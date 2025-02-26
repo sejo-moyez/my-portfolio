@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+  background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  background: #ff0055;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+.btn:hover {
+  background: #cc0044;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Expanding animation to the full viewport */
+.hero::before {
+  content: '';
+  position: fixed; /* Fixed to cover everything */
+  top: 0;
+  left: 0;
+  width: 200vw;
+  height: 200vh;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 70%);
+  animation: rotate 10s linear infinite;
+  z-index: -1; /* Ensures it stays in the background */
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Glitch Effect */
+.glitch {
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+}
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+.glitch::before {
+  color: #ff0055;
+  transform: translate(-2px, -2px);
+}
+.glitch::after {
+  color: #00ffee;
+  transform: translate(2px, 2px);
+}
+
+/* About Section */
+.about {
+  padding: 80px 20px;
+  background: #252525;
+  text-align: center;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ff0055;
+  box-shadow: 0 0 15px rgba(255, 0, 85, 0.5);
+}
+
+

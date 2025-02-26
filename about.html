@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 70%);
+            animation: rotate 10s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .glitch {
+            font-size: 3rem;
+            font-weight: bold;
+            position: relative;
+            text-transform: uppercase;
+        }
+        .glitch::before, .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+        }
+        .glitch::before {
+            color: #ff0055;
+            transform: translate(-2px, -2px);
+        }
+        .glitch::after {
+            color: #00ffee;
+            transform: translate(2px, 2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-transparent absolute top-0 w-full p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">My Portfolio</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:underline">Home</a></li>
+                <li><a href="#about" class="hover:underline">About</a></li>
+                <li><a href="#projects" class="hover:underline">Projects</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2 class="glitch" data-text="Welcome to the Unknown">Welcome to the Unknown</h2>
+        <p class="text-lg mt-4 opacity-80">Daring. Bold. Unconventional.</p>
+        <a href="#projects" class="mt-6 inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-all duration-300">
+            Explore the Chaos
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-gray-900 text-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
+            <img src="https://via.placeholder.com/300" alt="Profile Picture" class="rounded-full w-40 h-40 border-4 border-red-600 shadow-lg">
+            <div class="text-center md:text-left">
+                <h2 class="text-4xl font-bold text-red-500 mb-4">About Me</h2>
+                <p class="text-lg opacity-80 leading-relaxed">
+                    I am a visionary developer blending technology and creativity.
+                    Passionate about building unique, high-impact digital experiences.
+                    My work challenges norms and redefines possibilities.
+                </p>
+                <a href="#projects" class="mt-6 inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-all duration-300">
+                    See My Work
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

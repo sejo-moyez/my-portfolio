@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/YOUR-FONT-AWESOME-KIT.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+</head>
+<body>
+  
+    <!-- Header (Optional) -->
+    <div id="header-container"></div>
+
+
+    <!-- Contact Section -->
+    <section class="contact py-20 px-6 bg-gray-900 text-white text-center">
+        <h2 class="text-3xl font-bold text-red-500">Contact Me</h2>
+        <p class="mt-4 opacity-80">Have a project in mind? Let's make it happen.</p>
+
+        <!-- Contact Information -->
+        <div class="contact-info mt-6">
+            <p class="flex items-center justify-center gap-2">
+                <i class="fas fa-phone text-red-500"></i> +123 456 7890
+            </p>
+            <p class="flex items-center justify-center gap-2 mt-2">
+                <i class="fas fa-envelope text-red-500"></i> example@email.com
+            </p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-links flex justify-center gap-6 mt-6">
+            <a href="https://twitter.com/yourhandle" target="_blank" class="hover:text-red-500 transition">
+                <i class="fab fa-twitter text-2xl"></i>
+            </a>
+            <a href="https://github.com/yourgithub" target="_blank" class="hover:text-red-500 transition">
+                <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-red-500 transition">
+                <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+        </div>
+
+        <!-- Contact Form -->
+        <form action="#" method="POST" class="mt-8 mx-auto max-w-md">
+            <input type="text" name="name" placeholder="Your Name" class="w-full p-3 mb-4 bg-black text-white border border-gray-600 rounded-lg">
+            <input type="email" name="email" placeholder="Your Email" class="w-full p-3 mb-4 bg-black text-white border border-gray-600 rounded-lg">
+            <textarea name="message" placeholder="Your Message" class="w-full p-3 mb-4 bg-black text-white border border-gray-600 rounded-lg"></textarea>
+            <button type="submit" class="w-full bg-red-600 text-white p-3 rounded-lg hover:bg-red-700 transition-all duration-300">
+                Send Message
+            </button>
+        </form>
+    </section>
+
+    <!-- Slider Section -->
+    <div class="testimonial-slider mt-10 px-6">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide bg-gray-900 p-6 rounded-lg text-center">
+                    <p class="text-lg">"This portfolio is next-level! Absolutely stunning work!"</p>
+                    <h4 class="mt-2 text-red-500">- John Doe</h4>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide bg-gray-900 p-6 rounded-lg text-center">
+                    <p class="text-lg">"Bold, controversial, and unique. Just my style!"</p>
+                    <h4 class="mt-2 text-red-500">- Jane Smith</h4>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide bg-gray-900 p-6 rounded-lg text-center">
+                    <p class="text-lg">"A perfect balance of glitch, futurism, and professionalism!"</p>
+                    <h4 class="mt-2 text-red-500">- Alex Brown</h4>
+                </div>
+            </div>
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div id="footer-container"></div>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

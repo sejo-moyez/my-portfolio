@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <style>
+        body {
+            background: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+        }
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: #111;
+            padding: 20px;
+            border-radius: 12px;
+            position: relative;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .project-card:hover {
+            transform: translateY(-10px) rotate(-1deg);
+            box-shadow: 0px 4px 30px rgba(255, 0, 102, 0.6);
+        }
+        .project-card:hover img {
+            filter: brightness(1.2);
+        }
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            position: relative;
+        }
+        .project-title::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(90deg, #ff0055, #00ffee);
+            transition: width 0.4s;
+        }
+        .project-card:hover .project-title::after {
+            width: 120%;
+        }
+        .project-card img {
+            width: 100%;
+            border-radius: 8px;
+            transition: filter 0.3s;
+        }
+        .project-description {
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+        .project-card:hover .project-description {
+            opacity: 1;
+            color: #ff0055;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Placeholder for Header -->
+    <div id="header-container"></div>
+
+    <!-- Projects Section -->
+    <section class="py-20 px-6">
+      <header class="hero">
+        <h2 class="glitch" data-text="Projects That Challenge Norms">Projects That Challenge Norms</h2>
+        <p class="text-lg opacity-80">Innovative. Disruptive. Unapologetic.</p>
+      </header>
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center text-red-500 mb-12">Projects</h2>
+    
+
+            <!-- Projects Grid -->
+            <div class="projects-container">
+                <!-- School Management System -->
+                <div class="project-card">
+                    <img src="assets/images/school-app.png" alt="School App">
+                    <h3 class="project-title">School Management System</h3>
+                    <p class="project-description">A Django-based system for managing student records efficiently.</p>
+                </div>
+
+                <!-- Grader Maintenance -->
+                <div class="project-card">
+                    <img src="assets/images/grader-repair.png" alt="Grader Repair">
+                    <h3 class="project-title">Grader Maintenance & Repair</h3>
+                    <p class="project-description">Worked on front & back axle, tandem, and pump repairs.</p>
+                </div>
+
+                <!-- Django Portfolio Website -->
+                <div class="project-card">
+                    <img src="assets/images/portfolio.png" alt="Portfolio">
+                    <h3 class="project-title">Django Portfolio Website</h3>
+                    <p class="project-description">A fully customized portfolio website with Tailwind CSS.</p>
+                </div>
+
+                <!-- Excavator Attachment Assembly -->
+                <div class="project-card">
+                    <img src="assets/images/excavator.png" alt="Excavator Assembly">
+                    <h3 class="project-title">Excavator Attachment Assembly</h3>
+                    <p class="project-description">Hands-on hydraulic and mechanical attachment assembly.</p>
+                </div>
+
+                <!-- Machine Diagnostics System -->
+                <div class="project-card">
+                    <img src="assets/images/diagnostics.png" alt="Diagnostics System">
+                    <h3 class="project-title">Machine Diagnostics System</h3>
+                    <p class="project-description">Electrical and hydraulic diagnostics for heavy machinery.</p>
+                </div>
+
+                <!-- WriterSphere -->
+                <div class="project-card">
+                    <img src="assets/images/writersphere.png" alt="WriterSphere">
+                    <h3 class="project-title">WriterSphere</h3>
+                    <p class="project-description">A platform designed to help writers collaborate and publish content.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placeholder for Footer -->
+  <div id="footer-container"></div>
+
+</body>
+</html>
